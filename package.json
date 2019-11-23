@@ -1,0 +1,50 @@
+{
+  "name": "babel-jest-modules",
+  "description": "Babel jest transformer compatible with es6 modules",
+  "version": "0.0.2",
+  "author": "Emiliano Bovetti <emiliano.bovetti@gmail.com>",
+  "license": "GPL-3.0",
+  "keywords": [
+    "babel",
+    "jest",
+    "esmodules",
+    "modules",
+    "es6"
+  ],
+  "main": "./index",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilianobovetti/babel-jest-modules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emilianobovetti/babel-jest-modules/issues"
+  },
+  "release": {
+    "branch": "master",
+    "prepare": [
+      "@semantic-release/npm",
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "index.js"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      "@semantic-release/npm",
+      "@semantic-release/github"
+    ]
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^6.7.0"
+  },
+  "peerDependencies": {
+    "@babel/core": ">=7.0"
+  }
+}
